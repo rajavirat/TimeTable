@@ -836,7 +836,7 @@ const TimetableGenerator = () => {
                             onClick={() => togglePreference('preferredDays', day)}
                             className={`px-4 py-2 rounded-lg transition-all duration-200 ${
                               currentActivity.preferredDays.includes(day)
-                                ? 'bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg transform scale-105'
+                                ? 'bg-gradient-to-r from-green-500 to-green-600 text-black shadow-lg transform scale-105'
                                 : darkMode
                                   ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
@@ -924,7 +924,7 @@ const TimetableGenerator = () => {
                           <div className="flex justify-between items-start">
                             <div className="flex-1">
                               <div className="flex items-center mb-2">
-                                <h4 className={`font-bold text-lg ${darkMode ? 'text-white' : 'text-gray-800'}`}>
+                                <h4 className={`font-bold text-lg ${darkMode ? 'text-black' : 'text-gray-800'}`}>
                                   {activity.name}
                                 </h4>
                                 <span className={`ml-3 px-2 py-1 rounded text-xs font-semibold ${
@@ -948,17 +948,17 @@ const TimetableGenerator = () => {
                                 {activity.room && <div>📍 Room: {activity.room}</div>}
                                 {activity.description && <div>📝 {activity.description}</div>}
                                 {activity.preferredDays.length > 0 && (
-                                  <div className="text-green-600">
+                                  <div className="text-white">
                                     ✓ Preferred days: {activity.preferredDays.join(', ')}
                                   </div>
                                 )}
                                 {activity.preferredTimes.length > 0 && (
-                                  <div className="text-blue-600">
+                                  <div className="text-white">
                                     ✓ Preferred times: {activity.preferredTimes.join(', ')}
                                   </div>
                                 )}
                                 {activity.avoidTimes.length > 0 && (
-                                  <div className="text-red-600">
+                                  <div className="text-white">
                                     ✗ Avoid times: {activity.avoidTimes.join(', ')}
                                   </div>
                                 )}
